@@ -27,7 +27,12 @@
 					<input id="label-name" name="labelName" value="" class="text" aria-described-by="flowchart-admin-use" />
 					<em id="flowchart-admin-use" class="flowchart-em extra-label">(e.g "Yes", "No", "Accepted")</em>
 				</fieldset>
-				<h3 class="cms-panel-header states-heading">New States</h3>
+				<h3 class="cms-panel-header states-heading">
+					New States 
+					<a href="admin/flowcharts/FlowState/EditForm/field/FlowState/item/new" class="action flowchart-add-state ss-ui-action-constructive ss-ui-button ui-button ui-widget ui-state-default ui-corner-all new new-link" data-parent-id="$Record.ID" role="button" data-popupclass="flowchart-state-popup" aria-disabled="false">
+					+
+					</a>
+				</h3>
 				<% loop $Record.FlowStates.Reverse %>
 					<div id="id_{$ID}" data-id="$ID" class="order_$Modulus(6) state col new-state <% if $Size %>$Size<% else %>two<% end_if %>" tabindex="0">
 						<% if $Number %>
